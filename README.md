@@ -16,4 +16,17 @@
 
 ## Wallpaper: ![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/wallpaper.png)
 
-## Review: ![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/image.png)
+## Review
+
+### Overview
+![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/image.png)
+
+### Powermenu
+![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/Powermenu.png)
+
+### Application Launcher
+![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/Application%20Launcher.png)
+
+## Future Work
+- Add **volume bar**
+- Add **Notification Center**
