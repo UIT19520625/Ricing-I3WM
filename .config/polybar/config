@@ -1,0 +1,464 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[settings]
+; Enables pseudo-transparency for the bar
+; If set to true the bar can be transparent without a compositor.
+pseudo-transparency = true
+
+[colors]
+;background = ${xrdb:color0:#222}
+background = #222
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+##################################################################################################
+##################################### WORKSPACE BAR ##############################################
+##################################################################################################
+
+[bar/workspace]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 250
+height = 25
+offset-x = 10
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #81A1C1
+foreground = #D8DEE9
+
+padding-left = 0
+padding-right = 0
+
+font-0 = Icons:size=10:weight=regular;3
+
+modules-center = i3
+
+;wm-restack = i3
+
+override-redirect = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+################################## DATE BAR ######################################################
+##################################################################################################
+
+[bar/date]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 200
+height = 25
+offset-x = 1710
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #B48EAD
+foreground = #3B4252
+
+font-0 = Iosevka Term:size=10:weight=bold;3
+
+modules-center = date
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+################################## TIME BAR ######################################################
+##################################################################################################
+
+[bar/dtime]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 66
+height = 25
+offset-x = 927
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #EBCB8B
+foreground = #3B4252
+
+padding-left = 0
+padding-right = 0
+
+font-0 = Iosevka Term:size=10:weight=bold;3
+
+modules-center = time
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+################################## WIFI BAR ######################################################
+##################################################################################################
+
+[bar/wifi]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25
+height = 25
+offset-x = 1640
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #D08770
+
+padding-left = 0
+padding-right = 0
+
+font-0 = feather:size=12:weight=bold;3
+
+modules-center = wlan
+
+override-redirect = true
+
+click-left = /home/bakansm/.config/polybar/scripts/rofi-wifi-menu/rofi-wifi-menu.sh &
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+################################## VOL BAR #######################################################
+##################################################################################################
+
+[bar/volume]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25
+height = 25
+offset-x = 1675
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #A3BE8C
+foreground = #3B4252
+
+padding-left = 0
+padding-right = 0
+
+font-0 = Material Icons:size=12:weight=bold;4
+
+modules-center = alsa
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+#################################### BL BAR ######################################################
+##################################################################################################
+
+[bar/backlight]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 25
+height = 25
+offset-x = 1735
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #A3BE8C
+foreground = #3B4252
+
+padding-left = 0
+padding-right = 0
+
+font-0 = Material Icons:size=12:weight=bold;4
+
+modules-center = xbacklight
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+##################################################################################################
+#################################### MUSIC BAR ###################################################
+##################################################################################################
+
+[bar/music]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 300
+height = 25
+offset-x = 1330
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #BF616A
+foreground = #D8DEE9
+
+padding-left = 0
+padding-right = 0
+
+font-0 = Material Icons:size=12:weight=bold;4
+
+modules-center = spotify
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+##################################################################################################
+#################################### TITLE BAR ###################################################
+##################################################################################################
+
+[bar/title]
+;monitor = ${env:MONITOR:HDMI-1}
+width = 300
+height = 25
+offset-x = 270
+offset-y = 5
+radius = 0.0
+fixed-center = true
+enable-ipc = true
+
+background = #8FBCBB
+foreground = #3B4252
+
+font-0 = Iosevka Term:size=10:weight=bold;3
+
+modules-center = title
+
+override-redirect = true
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+
+###############################################################################################################
+
+[module/spotify]
+type = custom/script
+interval = 1
+;format-prefix = ""
+format = <label>
+exec = python /home/bakansm/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+;control players (optional)
+click-left = playerctl --player=spotify play-pause 
+click-right = playerctl --player=spotify next 
+click-middle = playerctl --player=spotify previous
+
+[module/title]
+type = internal/xwindow
+; Available tags:
+;   <label> (default)
+format = <label>
+format-background = #8FBCBB
+format-foreground = #3B4252
+format-padding = 1
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Nothing here
+label-empty-foreground = #D8DEE9
+
+ 
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-underline = ${colors.secondary}
+
+label-layout = %layout%
+label-layout-underline = ${colors.secondary}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.secondary}
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+ws-icon-0 = 
+ws-icon-1 = 
+ws-icon-2 = 
+ws-icon-3 = 
+ws-icon-4 = 
+ws-icon-5 = 
+ws-icon-6 = 
+ws-icon-7 = 
+ws-icon-8 = 
+ws-icon-9 = 
+ws-icon-default = 
+
+; focused = Active workspace on focused monitor
+label-focused = %icon%
+label-focused-background = #81A1C1
+label-focused-foreground = #4C566A
+label-focused-padding = 1
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %icon%
+label-unfocused-background = #81A1C1
+label-unfocused-padding = 1
+
+; visible = Active workspace on unfocused monitor
+label-visible = %icon%
+label-visible-background = #81A1C1
+label-visible-padding = 1
+
+; urgent = Workspace with urgency hint set
+label-urgent = %icon%
+label-urgent-background = #81A1C1
+label-urgent-padding = 1
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected = <ramp-signal>
+format-disconnected = <label-disconnected>
+label-disconnected = ""
+label-disconnected-foreground = #ECEFF4
+
+
+ramp-signal-0 = 
+ramp-signal-1 = 
+ramp-signal-2 = 
+ramp-signal-3 = 
+
+ramp-signal-0-foreground = #ECEFF4
+ramp-signal-1-foreground = #D8DEE9
+ramp-signal-2-foreground = #4C566A
+ramp-signal-3-foreground = #2E3440
+
+[module/date]
+type = internal/date
+interval = 5
+
+date = "%A, %d %B %Y"
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 5
+
+time = %H:%M
+#time-alt = %H:%M:%S
+
+label = %time%
+
+[module/alsa]
+type = internal/alsa
+
+format-volume = <ramp-volume> 
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
+ramp-volume-3 = ""
+ramp-volume-4 = ""
+ramp-volume-5 = ""
+ramp-volume-6 = ""
+ramp-volume-7 = ""
+ramp-volume-8 = ""
+ramp-volume-9 = ""
+ramp-volume-10 = ""
+
+label-muted = ""
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini
