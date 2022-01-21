@@ -14,5 +14,6 @@
 - **Status bar:** [Polybar](https://github.com/polybar/polybar)
 ## Color scheme: [Nord theme](https://www.nordtheme.com/)
 
-## Wallpaper: [LINK](https://www.reddit.com/r/nordtheme/comments/hko43o/underwater_nord_wallpaper_in_8k/)
+## Wallpaper: ![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/wallpaper.png)
 
+## Review: ![](https://github.com/UIT19520625/Ricing-I3WM/blob/main/image.png)
